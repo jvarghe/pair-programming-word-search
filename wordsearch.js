@@ -67,7 +67,7 @@ const wordSearch = (letters, word) => {
   // Do a join again, this time on the transposed matrix, creating words from
   // what were columns in the original matrix.
   const verticallyJoinedWords = transposedMatrix.map(letter => letter.join(''));
-  console.log(verticallyJoinedWords);
+  // console.log(verticallyJoinedWords);
 
 
   // SEARCH THE "JOINED ARRAYS" FOR WORDS
@@ -89,7 +89,6 @@ const wordSearch = (letters, word) => {
   // SEARCH THE VERTICAL "WORDS"
   for (let element of verticallyJoinedWords) {
     if (element.includes(word)) {
-      //console.log(element);
       return true;
     }
   }
