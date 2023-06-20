@@ -100,4 +100,21 @@ describe("#wordSearch()", function() {
     assert.isTrue(result);
   });
 
+
+  it("Test should return `true` if a VERTICAL word IS present BACKWARD", function() {
+    const result = wordSearch([
+      ['A', 'O', 'C', 'F', 'U', 'U', 'A', 'L'],
+      ['D', 'R', 'E', 'F', 'N', 'I', 'E', 'S'],
+      ['Y', 'E', 'C', 'F', 'O', 'U', 'A', 'L'],
+      ['H', 'L', 'J', 'T', 'L', 'V', 'R', 'G'],
+      ['W', 'L', 'C', 'S', 'O', 'E', 'R', 'L'],
+      ['B', 'A', 'R', 'E', 'G', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'I', 'P', 'A', 'I'],
+      ['O', 'A', 'C', 'A', 'S', 'U', 'A', 'S'],
+      ['E', 'C', 'K', 'F', 'T', 'U', 'A', 'L'],
+    ], 'ORELLABAC'); // CABALLERO
+
+    assert.isTrue(result);
+  });
+
 });
