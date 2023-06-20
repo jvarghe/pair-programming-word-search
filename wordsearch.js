@@ -1,5 +1,11 @@
 /* M02 W05 PAIR PROGRAMMING CHALLENGE: WORD SEARCH
  *
+ * PARTNERS:
+ *
+ *   * Jerryl Varghese (Github: jvarghe)
+ *   * Khaildyn Chan (Github: makhaildynchan)
+ *
+ *
  * DIRECTIONS:
  *
  *   * Fork and clone this directory:
