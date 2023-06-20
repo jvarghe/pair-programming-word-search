@@ -68,6 +68,13 @@ const wordSearch = (letters, word) => {
   const horizontallyJoinedWords = letters.map(letter => letter.join(''));
   // console.log(horizontallyJoinedWords);
 
+  // Reverse the words in the matrix by calling `map()` and passing in words to
+  // a local reversing function.s
+  const horizontalWordsReversed = horizontallyJoinedWords
+    .map(word => reverseString(word));
+  // console.log(horizontalWordsReversed);
+
+
 
   // VERTICAL CONCATENATION
   // Tranpose the matrix so that its rows become columns:
@@ -79,6 +86,13 @@ const wordSearch = (letters, word) => {
   const verticallyJoinedWords = transposedMatrix.map(letter => letter.join(''));
   // console.log(verticallyJoinedWords);
 
+  // Reverse the words in the matrix by calling `map()` and passing in words to
+  // a local reversing function.s
+  const verticalWordsReversed = verticallyJoinedWords
+    .map(word => reverseString(word));
+  console.log(verticalWordsReversed);
+
+
 
   // SEARCH THE "JOINED ARRAYS" FOR WORDS
   // `horizontallyJoinedWords` and `verticallyJoinedWords` should be
@@ -88,7 +102,7 @@ const wordSearch = (letters, word) => {
 
 
   // SEARCH THE HORIZONTAL "WORDS"
-  for (let element of horizontallyJoinedWords) {
+  for (const element of horizontallyJoinedWords) {
 
     if (element.includes(word)) {
       return true;
@@ -97,15 +111,35 @@ const wordSearch = (letters, word) => {
   }
 
   // SEARCH THE VERTICAL "WORDS"
-  for (let element of verticallyJoinedWords) {
+  for (const element of verticallyJoinedWords) {
     if (element.includes(word)) {
       return true;
     }
   }
 
 
-  // If the search of both the horizontal and vertical lists, did not return
-  // any positive values, the word was NOT found. Return `false`.
+  // SEARCH THE MATRIX FOR REVERSED WORDS
+  // Search the matrix horizontally for backwards words:
+  for (const element of horizontalWordsReversed) {
+
+    if (element.includes(word)) {
+      return true;
+    }
+
+  }
+
+  // Search the matrix vertically for backwards words:
+  for (const element of verticalWordsReversed) {
+
+    if (element.includes(word)) {
+      return true;
+    }
+
+  }
+
+
+  // If the search of all the lists did not return any positive values, the
+  // word was NOT found. Return `false`.
   return false;
 };
 
@@ -130,6 +164,17 @@ const transpose = function(matrix) {
 
 
   return transposedMatrix;
+};
+
+
+// This function will reverse a string.
+const reverseString = function(word) {
+
+  // There is no direct way of reversing strings in JavaScript, but you can
+  // split a string into an array of characters, reverse the array and join
+  // them back together into the reversed word.
+  let reversedString = word.split("").reverse().join("");
+  return reversedString;
 };
 
 

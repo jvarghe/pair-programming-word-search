@@ -5,8 +5,8 @@ const assert = chai.assert;
 const wordSearch = require('../wordsearch.js');
 
 
-// MOCHA & CHAI TESTS
 
+// MOCHA & CHAI TESTS
 describe("#wordSearch()", function() {
 
   it("Test should return `Array is Empty` if matrix is empty", function() {
@@ -44,7 +44,7 @@ describe("#wordSearch()", function() {
       ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
       ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
-    ], 'FRANK');
+    ], 'GODZILLA');
 
     assert.isFalse(result);
   });
@@ -79,6 +79,23 @@ describe("#wordSearch()", function() {
       ['O', 'D', 'C', 'A', 'S', 'U', 'A', 'S'],
       ['E', 'Z', 'K', 'F', 'T', 'U', 'A', 'L'],
     ], 'UFOLOGIST');
+
+    assert.isTrue(result);
+  });
+
+
+  it("Test should return `true` if the HORIZONTAL word IS present BACKWARD", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'U', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'O', 'U', 'A', 'L'],
+      ['H', 'M', 'J', 'T', 'L', 'V', 'R', 'G'],
+      ['W', 'H', 'C', 'S', 'O', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'G', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'I', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'S', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'T', 'U', 'A', 'L'],
+    ], 'DLEFNIES');
 
     assert.isTrue(result);
   });
