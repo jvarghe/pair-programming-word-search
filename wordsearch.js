@@ -90,7 +90,7 @@ const wordSearch = (letters, word) => {
   // a local reversing function.s
   const verticalWordsReversed = verticallyJoinedWords
     .map(word => reverseString(word));
-  console.log(verticalWordsReversed);
+  // console.log(verticalWordsReversed);
 
 
 

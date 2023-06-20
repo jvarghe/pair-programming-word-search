@@ -84,10 +84,10 @@ describe("#wordSearch()", function() {
   });
 
 
-  it("Test should return `true` if the HORIZONTAL word IS present BACKWARD", function() {
+  it("Test should return `true` if a HORIZONTAL word IS present BACKWARD", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'U', 'U', 'A', 'L'],
-      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['D', 'L', 'E', 'F', 'N', 'I', 'E', 'S'],
       ['Y', 'F', 'C', 'F', 'O', 'U', 'A', 'L'],
       ['H', 'M', 'J', 'T', 'L', 'V', 'R', 'G'],
       ['W', 'H', 'C', 'S', 'O', 'E', 'R', 'L'],
