@@ -102,5 +102,28 @@ const wordSearch = (letters, word) => {
 
 
 
+// This function transposes matrices, making columns into rows and vice versa.
+const transpose = function(matrix) {
+
+  const transposedMatrix = [];
+
+
+  for (let column = 0; column < matrix[0].length; column++) {
+    const transposedRow = [];
+
+
+    for (let row = 0; row < matrix.length; row++) {
+      transposedRow.push(matrix[row][column]);
+    }
+
+    transposedMatrix.push(transposedRow);
+  }
+
+
+  return transposedMatrix;
+};
+
+
+
 // EXPORTS
 module.exports = wordSearch;
