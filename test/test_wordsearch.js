@@ -50,7 +50,7 @@ describe("#wordSearch()", function() {
   });
 
 
-  it("Test should return `true` if the word IS present", function() {
+  it("Test should return `true` if the word IS present HORIZONTALLY", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
