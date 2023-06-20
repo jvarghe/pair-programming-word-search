@@ -48,6 +48,12 @@
 // will return `true`, or else it will return `false`.
 const wordSearch = (letters, word) => {
 
+  // GUARD CLAUSES
+  if (letters.length === 0) {
+    return "Array is Empty!";
+  }
+
+
   // CONCATENATING CHARACTERS TO CREATE "WORDS"
 
   // HORIZONTAL CONCATENATION

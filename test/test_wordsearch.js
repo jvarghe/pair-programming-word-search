@@ -9,7 +9,14 @@ const wordSearch = require('../wordsearch.js');
 
 describe("#wordSearch()", function() {
 
-  it("Test should return `false` if the word is NOT present.", function() {
+  it("Test should return `Array is Empty` if matrix is empty", function() {
+    const result = wordSearch([], 'RWANDA');
+    const returnString = "Array is Empty!";
+    assert.strictEqual(result, returnString);
+  });
+
+
+  it("Test should return `false` if the word is NOT present", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
@@ -26,7 +33,7 @@ describe("#wordSearch()", function() {
   });
 
 
-  it("Test should return `true` if the word IS present.", function() {
+  it("Test should return `true` if the word IS present", function() {
     const result = wordSearch([
       ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
       ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
