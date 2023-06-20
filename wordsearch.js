@@ -53,6 +53,10 @@ const wordSearch = (letters, word) => {
     return "Array is Empty!";
   }
 
+  if (typeof word === "number") {
+    return "Word is a Number. Enter a string!";
+  }
+
 
   // CONCATENATING CHARACTERS TO CREATE "WORDS"
 

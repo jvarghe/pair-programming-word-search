@@ -11,8 +11,25 @@ describe("#wordSearch()", function() {
 
   it("Test should return `Array is Empty` if matrix is empty", function() {
     const result = wordSearch([], 'RWANDA');
-    const returnString = "Array is Empty!";
-    assert.strictEqual(result, returnString);
+    const expectedResult1 = "Array is Empty!";
+    assert.strictEqual(result, expectedResult1);
+  });
+
+
+  it("Test should return `word is NOT a String` if word is a Number", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 12345);
+    const expectedResult2 = "Word is a Number. Enter a string!";
+    assert.strictEqual(result, expectedResult2);
   });
 
 
